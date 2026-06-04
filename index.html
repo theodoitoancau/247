@@ -2,10 +2,63 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Xác nhận</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    #confirmBtn {
+      border: none;
+      background: #ffffff;
+      color: #333;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 16px 32px;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      transition: all 0.25s ease;
+      max-width: 100%;
+    }
+
+    #confirmBtn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    #confirmBtn:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 480px) {
+      #confirmBtn {
+        width: 100%;
+        max-width: 320px;
+        font-size: 16px;
+        padding: 14px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <button id="confirmBtn">Xác nhận không phải là robot</button>
+  <button id="confirmBtn">
+    Xác nhận không phải là robot
+  </button>
 
   <script>
     document.getElementById("confirmBtn").addEventListener("click", function () {
